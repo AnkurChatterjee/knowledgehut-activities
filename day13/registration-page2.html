@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registration Page</h1><hr>
+    <form action="#" method="post">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="un" autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="radio" name="g" value="M">Male</td>
+                    <td><input type="radio" name="g" value="F">Female</td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <td>Courses</td>
+                    <td><input type="checkbox" name="courses" value="html">HTML</td>
+                    <td><input type="checkbox" name="courses" value="CSS">CSS</td>
+                    <td><input type="checkbox" name="courses" value="js">Javascript</td>
+                </tr>
+                <tr>
+                    <td>Qualification</td>
+                    <td><select name="qual">
+                        <optgroup label="Bachelor's Degree">
+                            <option value="btech">B.Tech</option>
+                            <option value="bca">BCA</option>
+                            <option value="bsc">B.Sc</option>
+                        </optgroup>
+                        <optgroup label="Master's Degree">
+                            <option value="mtech">M.Tech</option>
+                            <option value="mca">MCA</option>
+                            <option value="mba">MBA</option>
+                        </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><textarea name="adrss"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Upload Pic</td>
+                    <td><input type="file" name="pic"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit"></td>
+                    <td><input type="reset" value="Clear"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
