@@ -1,0 +1,13 @@
+h1{
+    margin: 10px;
+    text-decoration: underline;
+}
+table{
+    margin: 10px;
+    font-size: larger;
+}
+span{
+    color: red;
+    font-size: small;
+    font-style: italic;
+}
