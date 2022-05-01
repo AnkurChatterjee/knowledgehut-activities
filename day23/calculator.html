@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="calculator.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="container">
+        <div class="out">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="n1">Number 1</label></td>
+                        <td><input type="text" id="n1" autocomplete="off" onkeydown="return digit1(event)"></td>
+                        <td><span id="s1"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="n2">Number 2</label></td>
+                        <td><input type="text" id="n2" autocomplete="off" onkeydown="return digit2(event)"></td>
+                        <td><span id="s2"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label>Result</label></td>
+                        <td><input type="text" id="r" readonly></td>
+                    </tr>
+                </tbody>
+            </table><br>
+        </div>
+        
+        <div class="keys">
+            <button onclick="add()">Add</button>
+            <button onclick="sub()">Sub</button>
+            <button onclick="mul()">Mul</button>
+            <button onclick="div()">Div</button>
+        </div>
+    </div>
+    <script src="calculator.js" type="text/javascript"></script>
+</body>
+</html>
