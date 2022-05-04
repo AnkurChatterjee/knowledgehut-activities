@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        class User{
+            constructor(name,contact){
+                this.name=name;
+                this.contact=contact;
+            }
+        }
+        let User1=new User("Raj");
+        let User2=new User("Ajay", {phone:9856, email:"ajay@gmail.com"});
+        let User3=new User('Pronoy', {email:"pronoy@gmail.com"})
+        let UserArray=[];
+        UserArray.push(User1);
+        UserArray.push(User2);
+        UserArray.push(User3);
+        UserArray.forEach((n)=>document.write(`<h4>Name = ${n.name}, Phone = ${n?.contact?.phone}, Email = ${n?.contact?.email}</h4>`));
+    </script>
+</body>
+</html>
