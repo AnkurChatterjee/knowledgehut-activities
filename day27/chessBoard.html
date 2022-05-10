@@ -13,19 +13,8 @@
         let ctx=c.getContext('2d');
         for(let i=0;i<8;i++){
             for(let j=0;j<8;j++){
-                if(i%2==0){
-                    if(j%2==0)
-                        ctx.fillStyle='white';
-                    else
-                        ctx.fillStyle='black';
-                }
-                else{
-                    if(j%2==0)
-                        ctx.fillStyle='black';
-                    else
-                        ctx.fillStyle='white';
-                }
-                ctx.fillRect(j*50,i*50,50,50);
+                if((i+j)%2!=0)
+                    ctx.fillRect(j*50,i*50,50,50);
             }
         }
     </script>
