@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="i1" autocomplete="off" required>
+        <span id="s1"></span>
+    </div>
+    <div>
+        <button onclick="store()">Store</button>
+    </div>
+    <div id="main">Stored Items: </div>
+    <script type="text/javascript">
+        let ele=document.getElementById('main');
+        let s=new Set();
+        function store(){
+            let item=document.getElementById('i1').value;
+            item = item.toUpperCase();
+            let msg=document.getElementById('s1');
+            let flag=true;
+            if(s.size==0){
+                s.add(item);
+                msg.innerHTML = `<span style="color: green;">Item Stored</span>`;
+                document.getElementById('i1').value=``;
+            }
+            else{
+                s.forEach((n,i) => {
+                    if(i==item){
+                        msg.innerHTML=`<span style="color: red;">This item has already been stored</span>`;
+                        flag=false;
+                    }
+                })
+                s.add(item);
+                if(flag==true){
+                    msg.innerHTML = `<span style="color: green;">Item Stored</span>`;
+                    document.getElementById('i1').value=``;
+                }
+            }
+            console.log(s);
+            let itemList=``;
+            s.forEach((n,i) => {
+                itemList += `<li>${n}</li>`;
+            })
+            let storedItems=`<ol>`+itemList+`</ol>`;
+            ele.innerHTML=storedItems;
+        }
+    </script>
+</body>
+</html>
